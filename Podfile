@@ -12,6 +12,8 @@ target 'CultureAR' do
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     pod 'IGListKit', '~> 3.0'
+    pod 'Reusable'
+    pod 'Kingfisher'
 
   target 'CultureARTests' do
     inherit! :search_paths

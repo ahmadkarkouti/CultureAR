@@ -32,7 +32,17 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         HomeVC.tabBarItem.title = "Home"
         HomeVC.navigationBar.isHidden = true
         
-        viewControllers = [HomeVC]
+        let PostVC = UINavigationController(rootViewController: PostController())
+        //        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "costume_eow_gold1.jpg")
+        PostVC.tabBarItem.title = "Post"
+        PostVC.navigationBar.isHidden = true
+        
+        let ProfileVC = UINavigationController(rootViewController: ProfileController())
+        //        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "costume_eow_gold1.jpg")
+        ProfileVC.tabBarItem.title = "Profile"
+        ProfileVC.navigationBar.isHidden = true
+        
+        viewControllers = [HomeVC, PostVC, ProfileVC]
         tabBar.tintColor = .black
         
         // modifiy tab bar item insets

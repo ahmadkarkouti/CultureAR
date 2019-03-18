@@ -72,12 +72,18 @@ PODS:
   - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
+  - Kingfisher (5.2.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -86,6 +92,8 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - IGListKit (~> 3.0)
+  - Kingfisher
+  - Reusable
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -102,8 +110,10 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - IGListKit
+    - Kingfisher
     - leveldb-library
     - nanopb
+    - Reusable
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -119,10 +129,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 4bbd3a8205f32dd463066ef01a0996e2f03ed996
+PODFILE CHECKSUM: a626fd402958d84c760c06d178c4443f8622d7bf
 
 COCOAPODS: 1.5.2
