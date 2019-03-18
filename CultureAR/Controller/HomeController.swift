@@ -119,5 +119,13 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! HeaderCell
         return header
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let eventController = EventController()
+        eventController.headerImage.kf.setImage(with: URL(string: events[indexPath.row].eventImage))
+        eventController.passedTitle = events[indexPath.row].eventName
+        eventController.passedDescription = events[indexPath.row].eventDescription
+        navigationController?.pushViewController(eventController, animated: true)
+    }
 
 }
