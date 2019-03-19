@@ -14,42 +14,15 @@ import FirebaseDatabase
 
 class ProfileController: UIViewController {
     
-    let profileImage: UIImageView = {
-        let image = UIImageView()
-        image.layer.cornerRadius = 25
-        image.layer.masksToBounds = true
-        return image
-    }()
+
+    @IBOutlet weak var borderView: UIView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        label.textAlignment = .center
-        return label
-    }()
     
-    let emailLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        label.textAlignment = .center
-        return label
-    }()
     
-    var logoutButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .purple
-        button.setTitle("Logout", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(logout), for: .touchUpInside)
-        return button
-    }()
     
-    let logoutButton2: UIBarButtonItem = {
-        let btn = UIBarButtonItem()
-        btn.title = "Logout"
-        return btn
-    }()
     
     
     var ref: DatabaseReference!
@@ -57,16 +30,13 @@ class ProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController!.navigationItem.rightBarButtonItem = logoutButton2
+        self.navigationItem.title = "Profile"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        navigationItem.rightBarButtonItem?.tintColor = .black
         
-        profileImage.anchor(view: view, top: view.safeAreaLayoutGuide.topAnchor, padding: UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0), size: CGSize(width: 50, height: 50))
-        profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        nameLabel.anchor(view: view, top: profileImage.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
-        
-        emailLabel.anchor(view: view, top: nameLabel.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
-        
-        logoutButton.anchor(view: view, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: UIEdgeInsets(top: 0, left: 50, bottom: 16, right: 50))
+
+        borderView.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1).cgColor
+        borderView.layer.borderWidth = 4
     }
     
     
@@ -81,16 +51,17 @@ class ProfileController: UIViewController {
         
         Database.database().reference().child("Users").child(userId).observeSingleEvent(of: .value) { (snapshot) in
             guard let values = snapshot.value as? [String:String] else { return }
-            let event = User(id: userId, dictionary: values)
-            self.profileImage.kf.setImage(with: URL(string: event.image))
-            self.nameLabel.text = event.name
-            self.emailLabel.text = event.email
+            let user = User(id: userId, dictionary: values)
+            
+            self.profileImage.kf.setImage(with: URL(string: user.image))
+            self.nameLabel.text = user.name
+            self.emailLabel.text = user.email
             
         }
         
     }
     
-    @objc func logout() {
+    @objc func handleLogout() {
         do {
             try Auth.auth().signOut()
             let LoginView = LoginController()

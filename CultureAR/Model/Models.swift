@@ -29,17 +29,19 @@ enum Interest: String {
     case Arts = "Arts"
 }
 
-struct Event: Decodable {
+struct Event {
     let id: String
     let eventName: String
     let eventDescription: String
     let eventImage: String
+    let imageHeight: Float
     
-    init(id: String, dictionary: [String:String]) {
+    init(id: String, dictionary: [String:Any]) {
         self.id = id
-        self.eventName = dictionary["Name"].unwrap
-        self.eventDescription = dictionary["Description"].unwrap
-        self.eventImage = dictionary["Image"].unwrap
+        self.eventName = (dictionary["Name"] as? String).unwrap
+        self.eventDescription = (dictionary["Description"] as? String).unwrap
+        self.eventImage = (dictionary["Image"] as? String).unwrap
+        self.imageHeight = (dictionary["ImageHeight"] as? Float).unwrap
     }
 }
 
@@ -53,5 +55,11 @@ struct Organisation: Decodable {
 extension Optional where Wrapped == String {
     var unwrap: String {
         return self ?? ""
+    }
+}
+
+extension Optional where Wrapped == Float {
+    var unwrap: Float {
+        return self ?? 0
     }
 }

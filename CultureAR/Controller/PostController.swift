@@ -14,9 +14,10 @@ import FirebaseAuth
 class PostController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
+    var imageHeight: CGFloat = 0
     
     var eventTextField: UITextField = {
-       let tf = UITextField()
+        let tf = UITextField()
         tf.placeholder = "Event Name"
         return tf
     }()
@@ -89,7 +90,7 @@ class PostController: UIViewController, UITextFieldDelegate {
         let key = Database.database().reference().childByAutoId().key
         self.ref = Database.database().reference().child("Events").child(user.uid)
         
-//        self.ref.setValue(["Name": self.eventTextField.text!, "Description": self.descriptionTextField.text!, "Image": profileImageUrl])
+        //        self.ref.setValue(["Name": self.eventTextField.text!, "Description": self.descriptionTextField.text!, "Image": profileImageUrl])
         
         let storageRef = Storage.storage().reference().child("Events").child("\(key).png")
         if let uploadData = self.imageView.image!.pngData() {
@@ -104,9 +105,9 @@ class PostController: UIViewController, UITextFieldDelegate {
                     }
                     
                     guard let profileImageUrl = url?.absoluteString else {return}
-                
+                    
                     self.ref = Database.database().reference().child("Events").child(user.uid).childByAutoId()
-                    self.ref.setValue(["Name": self.eventTextField.text!, "Description": self.descriptionTextField.text!, "Image": profileImageUrl])
+                    self.ref.setValue(["Name": self.eventTextField.text!, "Description": self.descriptionTextField.text!, "Image": profileImageUrl, "ImageHeight": self.imageHeight])
                 })
                 
                 
@@ -142,17 +143,17 @@ extension PostController: UIImagePickerControllerDelegate, UINavigationControlle
         
         var selectedImageFromPicker: UIImage?
         
-        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            selectedImageFromPicker = editedImage
-        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectedImageFromPicker = originalImage
         }
         
         if let selectedImage = selectedImageFromPicker {
             imageView.image = selectedImage
+            imageHeight = selectedImage.size.height
         }
         
         dismiss(animated: true, completion: nil)
     }
     
 }
+

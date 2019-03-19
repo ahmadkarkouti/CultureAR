@@ -60,7 +60,7 @@ class HomeController: UIViewController {
             print("=======================================================")
             print(value)
             value?.forEach({ (id, dOd) in
-                let event = Event(id: id as! String, dictionary: dOd as! [String : String])
+                let event = Event(id: id as! String, dictionary: dOd as! [String : Any])
                 print(event)
                 self.events.append(event)
             })
@@ -146,14 +146,14 @@ extension HomeController: HeaderCellDelegate {
 
 extension HomeController: PostGridLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> Float {
-        return 260
-//        let height = events[indexPath.item].imageHeight
-//        if height < 850 {
-//            return 260
-//        } else {
-//            return (height / 4) + 100
-//        }
-
+        
+        let height  = events[indexPath.item].imageHeight
+        if height < 850 {
+            return 260
+        } else {
+            return Float((height / 6) + 100)
+        }
+        
     }
-
+    
 }

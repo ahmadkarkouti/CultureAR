@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileController" customModule="CultureAR" customModuleProvider="target">
             <connections>
+                <outlet property="borderView" destination="n5w-Ts-Fqj" id="zRo-2j-hg4"/>
+                <outlet property="emailLabel" destination="U2X-6w-yhx" id="FD6-Lj-HdO"/>
+                <outlet property="nameLabel" destination="27f-xH-emT" id="jLK-qE-QlQ"/>
+                <outlet property="profileImage" destination="mDH-mz-pVg" id="Jrb-FB-ipN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +23,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5w-Ts-Fqj">
+                    <rect key="frame" x="140.5" y="48" width="94" height="94"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="9H6-hV-i0k"/>
+                        <constraint firstAttribute="width" secondItem="n5w-Ts-Fqj" secondAttribute="height" multiplier="1:1" id="E82-3i-eqg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="46"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDH-mz-pVg">
+                    <rect key="frame" x="142.5" y="50" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="UwF-R9-6RU"/>
+                        <constraint firstAttribute="width" secondItem="mDH-mz-pVg" secondAttribute="height" multiplier="1:1" id="qAp-ul-4k6"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="45"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-6w-yhx">
+                    <rect key="frame" x="171" y="173" width="33" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sip-vr-NGo">
+                    <rect key="frame" x="0.0" y="205" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.92393718274111669" green="0.92393718274111669" blue="0.92393718274111669" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Wc1-SB-vK8"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27f-xH-emT">
+                    <rect key="frame" x="137" y="150" width="101" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="27f-xH-emT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0N8-ON-tRC"/>
+                <constraint firstItem="mDH-mz-pVg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="2Zy-Lt-0c6"/>
+                <constraint firstItem="U2X-6w-yhx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="84M-fi-rcn"/>
+                <constraint firstItem="U2X-6w-yhx" firstAttribute="top" secondItem="27f-xH-emT" secondAttribute="bottom" id="94m-zw-hjq"/>
+                <constraint firstItem="mDH-mz-pVg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E0a-Cg-227"/>
+                <constraint firstItem="n5w-Ts-Fqj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="Tra-CI-VOM"/>
+                <constraint firstItem="27f-xH-emT" firstAttribute="top" secondItem="n5w-Ts-Fqj" secondAttribute="bottom" constant="8" id="h06-Av-tRs"/>
+                <constraint firstItem="Sip-vr-NGo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jl3-Uh-DfP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sip-vr-NGo" secondAttribute="trailing" id="kWi-it-CBy"/>
+                <constraint firstItem="n5w-Ts-Fqj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="odC-u4-atf"/>
+                <constraint firstItem="Sip-vr-NGo" firstAttribute="top" secondItem="U2X-6w-yhx" secondAttribute="bottom" constant="16" id="ytw-OK-6wQ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

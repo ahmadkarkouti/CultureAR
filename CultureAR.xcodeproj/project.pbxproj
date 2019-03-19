@@ -287,11 +287,11 @@
 		E0C4B004223D3B27008EB44D /* CultureAR */ = {
 			isa = PBXGroup;
 			children = (
+				E0289BA0223FBE530078FD3A /* Model */,
 				E0289BA9223FC1F30078FD3A /* Components */,
 				E0289BA3223FBE600078FD3A /* Supporting Files */,
 				E0289BA2223FBE5B0078FD3A /* Controller */,
 				E0289BA1223FBE570078FD3A /* View */,
-				E0289BA0223FBE530078FD3A /* Model */,
 				E0C4B005223D3B27008EB44D /* AppDelegate.swift */,
 				E0C4B007223D3B27008EB44D /* art.scnassets */,
 				E0C4B00E223D3B28008EB44D /* Assets.xcassets */,
