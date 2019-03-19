@@ -10,6 +10,17 @@ import UIKit
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        let index = viewControllers?.index(of: viewController)
+        if index == 1 {
+            let arViewController = ARController()
+            present(arViewController, animated: true)
+            return false
+        } else {
+            return true
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +39,19 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         
         
         let HomeVC = UINavigationController(rootViewController: HomeController())
-//        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "costume_eow_gold1.jpg")
+        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "Home")
         HomeVC.tabBarItem.title = "Home"
         HomeVC.navigationBar.isHidden = true
         
-        let PostVC = UINavigationController(rootViewController: PostController())
-        //        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "costume_eow_gold1.jpg")
-        PostVC.tabBarItem.title = "Post"
+        let PostVC = UINavigationController(rootViewController: ARController())
+        PostVC.tabBarItem.image = #imageLiteral(resourceName: "Science")
+        PostVC.tabBarItem.title = "Artefacts"
         PostVC.navigationBar.isHidden = true
         
         let ProfileVC = UINavigationController(rootViewController: ProfileController())
-        //        HomeVC.tabBarItem.image = #imageLiteral(resourceName: "costume_eow_gold1.jpg")
+        ProfileVC.tabBarItem.image = #imageLiteral(resourceName: "User")
         ProfileVC.tabBarItem.title = "Profile"
-        ProfileVC.navigationBar.isHidden = true
+        
         
         viewControllers = [HomeVC, PostVC, ProfileVC]
         tabBar.tintColor = .black

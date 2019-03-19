@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+protocol HeaderCellDelegate {
+    func didPressPost()
+}
 class HeaderCell: UICollectionViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var images = [#imageLiteral(resourceName: "1"), #imageLiteral(resourceName: "4"), #imageLiteral(resourceName: "2"), #imageLiteral(resourceName: "6"), #imageLiteral(resourceName: "5"), #imageLiteral(resourceName: "9"), #imageLiteral(resourceName: "7"), #imageLiteral(resourceName: "3"), #imageLiteral(resourceName: "8"), #imageLiteral(resourceName: "6")]
-
+    var delegate: HeaderCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +25,12 @@ class HeaderCell: UICollectionViewCell {
         collectionView.backgroundColor = .white
         collectionView.register(UINib(nibName: "RecommendedCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
     }
-
+    
+    
+    @IBAction func postButtonPressed(_ sender: Any) {
+        delegate?.didPressPost()
+    }
+    
 }
 
 extension HeaderCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

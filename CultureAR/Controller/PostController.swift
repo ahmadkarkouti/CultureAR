@@ -86,11 +86,12 @@ class PostController: UIViewController, UITextFieldDelegate {
     
     @objc func postEvent() {
         let user = Auth.auth().currentUser!
+        let key = Database.database().reference().childByAutoId().key
         self.ref = Database.database().reference().child("Events").child(user.uid)
         
 //        self.ref.setValue(["Name": self.eventTextField.text!, "Description": self.descriptionTextField.text!, "Image": profileImageUrl])
         
-        let storageRef = Storage.storage().reference().child("Events").child("\(user.uid).png")
+        let storageRef = Storage.storage().reference().child("Events").child("\(key).png")
         if let uploadData = self.imageView.image!.pngData() {
             storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                 if error != nil {

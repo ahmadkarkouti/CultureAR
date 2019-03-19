@@ -12,62 +12,123 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EventCell" customModule="CultureAR" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Bku-Ve-ASK" customClass="EventCell" customModule="CultureAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJB-t8-giH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                    </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34P-wm-1bL">
-                        <rect key="frame" x="16" y="156" width="343" height="128"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-9G-FyI">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="320"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5g-EA-Nx9">
-                                <rect key="frame" x="8" y="11" width="282" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKE-Fk-iDB">
-                                <rect key="frame" x="8" y="59" width="327" height="61"/>
-                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvu-YR-dK2">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="320"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oim-HM-d6O">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
+                                    </imageView>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7N-nO-put">
+                                        <rect key="frame" x="8" y="258" width="30" height="30"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPF-lc-BkF">
+                                                <rect key="frame" x="1" y="1" width="28" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="fuy-g3-5e5"/>
+                                                    <constraint firstAttribute="width" constant="28" id="hBX-7m-ZYJ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="1uk-cV-g1r"/>
+                                            <constraint firstItem="aPF-lc-BkF" firstAttribute="centerX" secondItem="i7N-nO-put" secondAttribute="centerX" id="9JG-ko-HfV"/>
+                                            <constraint firstItem="aPF-lc-BkF" firstAttribute="centerY" secondItem="i7N-nO-put" secondAttribute="centerY" id="BBA-Au-NKv"/>
+                                            <constraint firstAttribute="height" constant="30" id="QmP-PX-1JT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lo2-bB-M9g">
+                                        <rect key="frame" x="46" y="260.5" width="24" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                        <color key="textColor" red="0.21541878170000001" green="0.21541878170000001" blue="0.21541878170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-7G-PkD">
+                                        <rect key="frame" x="46" y="274" width="126" height="29"/>
+                                        <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of </string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="i7N-nO-put" firstAttribute="top" secondItem="Oim-HM-d6O" secondAttribute="bottom" constant="8" id="2gR-vt-60R"/>
+                                    <constraint firstItem="Lo2-bB-M9g" firstAttribute="leading" secondItem="i7N-nO-put" secondAttribute="trailing" constant="8" id="CHz-p9-7zW"/>
+                                    <constraint firstItem="Oim-HM-d6O" firstAttribute="top" secondItem="Wvu-YR-dK2" secondAttribute="top" id="HTz-KD-hT4"/>
+                                    <constraint firstItem="KkQ-7G-PkD" firstAttribute="top" secondItem="Lo2-bB-M9g" secondAttribute="bottom" id="QUU-ae-v9G"/>
+                                    <constraint firstItem="KkQ-7G-PkD" firstAttribute="leading" secondItem="Lo2-bB-M9g" secondAttribute="leading" id="X71-mb-sFp"/>
+                                    <constraint firstItem="i7N-nO-put" firstAttribute="leading" secondItem="Wvu-YR-dK2" secondAttribute="leading" constant="8" id="XgK-7O-4db"/>
+                                    <constraint firstItem="Oim-HM-d6O" firstAttribute="leading" secondItem="Wvu-YR-dK2" secondAttribute="leading" id="XhY-kP-oZ3"/>
+                                    <constraint firstItem="Lo2-bB-M9g" firstAttribute="centerY" secondItem="aPF-lc-BkF" secondAttribute="centerY" constant="-6" id="fMK-yN-XVO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oim-HM-d6O" secondAttribute="trailing" id="qIS-5Z-2TW"/>
+                                    <constraint firstAttribute="trailing" secondItem="KkQ-7G-PkD" secondAttribute="trailing" constant="8" id="qwe-0z-xqX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oim-HM-d6O" secondAttribute="bottom" constant="70" id="w1m-EG-fqQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="F5g-EA-Nx9" secondAttribute="trailing" constant="53" id="3G5-0A-Epx"/>
-                            <constraint firstItem="OKE-Fk-iDB" firstAttribute="top" secondItem="F5g-EA-Nx9" secondAttribute="bottom" constant="16" id="CLL-EJ-657"/>
-                            <constraint firstAttribute="height" constant="128" id="GiD-HN-BjY"/>
-                            <constraint firstItem="F5g-EA-Nx9" firstAttribute="leading" secondItem="OKE-Fk-iDB" secondAttribute="leading" id="Zm0-3f-Ap1"/>
-                            <constraint firstAttribute="bottom" secondItem="OKE-Fk-iDB" secondAttribute="bottom" constant="8" id="g2I-Mc-3L6"/>
-                            <constraint firstItem="OKE-Fk-iDB" firstAttribute="leading" secondItem="34P-wm-1bL" secondAttribute="leading" constant="8" id="gVu-pj-dxo"/>
-                            <constraint firstAttribute="trailing" secondItem="OKE-Fk-iDB" secondAttribute="trailing" constant="8" id="v3Z-YF-c6E"/>
+                            <constraint firstAttribute="trailing" secondItem="Wvu-YR-dK2" secondAttribute="trailing" id="Lv6-FB-aOK"/>
+                            <constraint firstAttribute="bottom" secondItem="Wvu-YR-dK2" secondAttribute="bottom" id="Qbv-Yk-KjU"/>
+                            <constraint firstItem="Wvu-YR-dK2" firstAttribute="top" secondItem="Qhi-9G-FyI" secondAttribute="top" id="SOm-tn-hgZ"/>
+                            <constraint firstItem="Wvu-YR-dK2" firstAttribute="leading" secondItem="Qhi-9G-FyI" secondAttribute="leading" id="ppV-3f-gHP"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="0.0" height="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="lJB-t8-giH" secondAttribute="bottom" id="BPp-os-lLN"/>
-                <constraint firstAttribute="trailing" secondItem="lJB-t8-giH" secondAttribute="trailing" id="M6j-Bm-YQC"/>
-                <constraint firstAttribute="bottom" secondItem="34P-wm-1bL" secondAttribute="bottom" constant="16" id="bst-G7-1aS"/>
-                <constraint firstItem="34P-wm-1bL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="hk2-WH-AxJ"/>
-                <constraint firstItem="lJB-t8-giH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l0Y-cc-OKM"/>
-                <constraint firstItem="lJB-t8-giH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ngP-Yy-KIS"/>
-                <constraint firstAttribute="trailing" secondItem="34P-wm-1bL" secondAttribute="trailing" constant="16" id="yqv-lS-58W"/>
+                <constraint firstAttribute="bottom" secondItem="Qhi-9G-FyI" secondAttribute="bottom" id="4Z9-Ow-TX7"/>
+                <constraint firstItem="Qhi-9G-FyI" firstAttribute="top" secondItem="Bku-Ve-ASK" secondAttribute="top" id="9y6-ax-0cg"/>
+                <constraint firstAttribute="trailing" secondItem="Qhi-9G-FyI" secondAttribute="trailing" id="Qcr-Ik-U1j"/>
+                <constraint firstItem="Qhi-9G-FyI" firstAttribute="leading" secondItem="Bku-Ve-ASK" secondAttribute="leading" id="gPP-yW-mfl"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="c23-bG-KPp"/>
+            <size key="customSize" width="180" height="320"/>
             <connections>
-                <outlet property="descriptionLabel" destination="OKE-Fk-iDB" id="779-Gg-y1j"/>
-                <outlet property="imageView" destination="lJB-t8-giH" id="eCF-xM-9f1"/>
-                <outlet property="nameLabel" destination="F5g-EA-Nx9" id="R2V-ah-a37"/>
+                <outlet property="descriptionLabel" destination="KkQ-7G-PkD" id="34M-mh-x8z"/>
+                <outlet property="imageView" destination="Oim-HM-d6O" id="lVj-eF-fEk"/>
+                <outlet property="nameLabel" destination="Lo2-bB-M9g" id="CdK-K2-Ldd"/>
             </connections>
-            <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </collectionViewCell>
     </objects>
 </document>

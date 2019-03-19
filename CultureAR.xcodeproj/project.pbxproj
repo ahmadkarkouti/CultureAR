@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1F157822403E70008119A0 /* PostGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F157722403E70008119A0 /* PostGridLayout.swift */; };
+		5B1F157A2240578C008119A0 /* PostEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F15792240578C008119A0 /* PostEventController.swift */; };
+		5B1F157D22406AB5008119A0 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F157B22406AB5008119A0 /* ARController.swift */; };
+		5B1F15852240DC4D008119A0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F15832240DC4D008119A0 /* ProfileController.swift */; };
+		5B1F15862240DC4D008119A0 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1F15842240DC4D008119A0 /* ProfileController.xib */; };
 		6847F4ED7F8EDFCECA9F04B0 /* Pods_CultureARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD30BDB63F37AA4338EF8F1A /* Pods_CultureARTests.framework */; };
 		92DEDA13D07467232F26181D /* Pods_CultureARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CBA42D2EDFA4BAA798A09 /* Pods_CultureARUITests.framework */; };
 		9892967D010A9BD1A8D37493 /* Pods_CultureAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8910091C215AAF7A747C8 /* Pods_CultureAR.framework */; };
@@ -23,7 +28,6 @@
 		E041B5C3223FF7D800A2F60F /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041B5C2223FF7D800A2F60F /* PostController.swift */; };
 		E041B5C5223FF9E400A2F60F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041B5C4223FF9E400A2F60F /* LoginController.swift */; };
 		E041B5C7223FFA0900A2F60F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041B5C6223FFA0900A2F60F /* RegisterController.swift */; };
-		E041B5C9223FFEC600A2F60F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041B5C8223FFEC600A2F60F /* ProfileController.swift */; };
 		E050E4E522401C06005CCC14 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050E4E422401C06005CCC14 /* EventController.swift */; };
 		E050E4E922401DC1005CCC14 /* EventHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050E4E722401DC1005CCC14 /* EventHeaderCell.swift */; };
 		E050E4EA22401DC1005CCC14 /* EventHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E050E4E822401DC1005CCC14 /* EventHeaderCell.xib */; };
@@ -31,7 +35,6 @@
 		E06A0978223FC8F40026A06A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06A0977223FC8F40026A06A /* Bindable.swift */; };
 		E0C4B006223D3B27008EB44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4B005223D3B27008EB44D /* AppDelegate.swift */; };
 		E0C4B008223D3B27008EB44D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C4B007223D3B27008EB44D /* art.scnassets */; };
-		E0C4B00A223D3B27008EB44D /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4B009223D3B27008EB44D /* ARController.swift */; };
 		E0C4B00F223D3B28008EB44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C4B00E223D3B28008EB44D /* Assets.xcassets */; };
 		E0C4B012223D3B28008EB44D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C4B010223D3B28008EB44D /* LaunchScreen.storyboard */; };
 		E0C4B01D223D3B28008EB44D /* CultureARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4B01C223D3B28008EB44D /* CultureARTests.swift */; };
@@ -58,6 +61,11 @@
 /* Begin PBXFileReference section */
 		029CBA42D2EDFA4BAA798A09 /* Pods_CultureARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CultureARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BC6F4D1A5CC88804DC6812 /* Pods-CultureARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureARUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CultureARUITests/Pods-CultureARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B1F157722403E70008119A0 /* PostGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridLayout.swift; sourceTree = "<group>"; };
+		5B1F15792240578C008119A0 /* PostEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventController.swift; sourceTree = "<group>"; };
+		5B1F157B22406AB5008119A0 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
+		5B1F15832240DC4D008119A0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		5B1F15842240DC4D008119A0 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		A5B282A233DD826EB92B63C2 /* Pods-CultureARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CultureARTests/Pods-CultureARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE8910091C215AAF7A747C8 /* Pods_CultureAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CultureAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B85454E66F9E2197E32D88 /* Pods-CultureARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CultureARTests/Pods-CultureARTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +84,6 @@
 		E041B5C2223FF7D800A2F60F /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		E041B5C4223FF9E400A2F60F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E041B5C6223FFA0900A2F60F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		E041B5C8223FFEC600A2F60F /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		E050E4E422401C06005CCC14 /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		E050E4E722401DC1005CCC14 /* EventHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHeaderCell.swift; sourceTree = "<group>"; };
 		E050E4E822401DC1005CCC14 /* EventHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventHeaderCell.xib; sourceTree = "<group>"; };
@@ -85,7 +92,6 @@
 		E0C4B002223D3B27008EB44D /* CultureAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C4B005223D3B27008EB44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C4B007223D3B27008EB44D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		E0C4B009223D3B27008EB44D /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		E0C4B00E223D3B28008EB44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0C4B011223D3B28008EB44D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C4B013223D3B28008EB44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B1F157622403E21008119A0 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5B1F157722403E70008119A0 /* PostGridLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		99C3B0B8591A03DCDA50418C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,14 +187,16 @@
 		E0289BA2223FBE5B0078FD3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E0C4B009223D3B27008EB44D /* ARController.swift */,
 				E0289BA4223FBE920078FD3A /* HomeController.swift */,
 				E06A0977223FC8F40026A06A /* Bindable.swift */,
 				E041B5C2223FF7D800A2F60F /* PostController.swift */,
 				E041B5C4223FF9E400A2F60F /* LoginController.swift */,
 				E041B5C6223FFA0900A2F60F /* RegisterController.swift */,
-				E041B5C8223FFEC600A2F60F /* ProfileController.swift */,
 				E050E4E422401C06005CCC14 /* EventController.swift */,
+				5B1F15792240578C008119A0 /* PostEventController.swift */,
+				5B1F157B22406AB5008119A0 /* ARController.swift */,
+				5B1F15832240DC4D008119A0 /* ProfileController.swift */,
+				5B1F15842240DC4D008119A0 /* ProfileController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +204,7 @@
 		E0289BA3223FBE600078FD3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B1F157622403E21008119A0 /* Layout */,
 				E0289BA6223FBF8A0078FD3A /* Extensions */,
 			);
 			path = "Supporting Files";
@@ -414,6 +431,7 @@
 				E041B5B0223FE68F00A2F60F /* EventCell.xib in Resources */,
 				E0C4B008223D3B27008EB44D /* art.scnassets in Resources */,
 				E041B5BF223FF1D700A2F60F /* RecommendedCell.xib in Resources */,
+				5B1F15862240DC4D008119A0 /* ProfileController.xib in Resources */,
 				E0C4B012223D3B28008EB44D /* LaunchScreen.storyboard in Resources */,
 				E0C4B00F223D3B28008EB44D /* Assets.xcassets in Resources */,
 				E041B5C1223FF5C500A2F60F /* GoogleService-Info.plist in Resources */,
@@ -531,17 +549,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0C4B00A223D3B27008EB44D /* ARController.swift in Sources */,
 				E041B5C7223FFA0900A2F60F /* RegisterController.swift in Sources */,
 				E050E4E522401C06005CCC14 /* EventController.swift in Sources */,
 				E041B5C5223FF9E400A2F60F /* LoginController.swift in Sources */,
 				E041B5BE223FF1D700A2F60F /* RecommendedCell.swift in Sources */,
+				5B1F157D22406AB5008119A0 /* ARController.swift in Sources */,
+				5B1F15852240DC4D008119A0 /* ProfileController.swift in Sources */,
 				E06A0978223FC8F40026A06A /* Bindable.swift in Sources */,
 				E0289BA8223FBF920078FD3A /* Anchor Extensions.swift in Sources */,
 				E041B5C3223FF7D800A2F60F /* PostController.swift in Sources */,
-				E041B5C9223FFEC600A2F60F /* ProfileController.swift in Sources */,
 				E0289BAB223FC2350078FD3A /* MainTabBarController.swift in Sources */,
+				5B1F157A2240578C008119A0 /* PostEventController.swift in Sources */,
 				E041B5B3223FE69800A2F60F /* HeaderCell.swift in Sources */,
+				5B1F157822403E70008119A0 /* PostGridLayout.swift in Sources */,
 				E050E4E922401DC1005CCC14 /* EventHeaderCell.swift in Sources */,
 				E041B5AF223FE68F00A2F60F /* EventCell.swift in Sources */,
 				E06A0976223FC6F40026A06A /* Models.swift in Sources */,
@@ -715,7 +735,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9J23G5958U;
+				DEVELOPMENT_TEAM = Q93T3ZJQ58;
 				INFOPLIST_FILE = CultureAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -734,7 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9J23G5958U;
+				DEVELOPMENT_TEAM = Q93T3ZJQ58;
 				INFOPLIST_FILE = CultureAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

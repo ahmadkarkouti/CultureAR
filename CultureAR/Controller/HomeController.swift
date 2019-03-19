@@ -16,7 +16,7 @@ class HomeController: UIViewController {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: PostGridLayout())
         cv.backgroundColor = .white
         return cv
     }()
@@ -28,6 +28,11 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.collectionViewLayout = PostGridLayout()
+        if let layout = collectionView.collectionViewLayout as? PostGridLayout {
+            layout.delegate = self
+        }
+        collectionView.contentInset.bottom = 410
         view.backgroundColor = .white
         ref = Database.database().reference()
         
@@ -112,11 +117,13 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 331)
+        return CGSize(width: view.frame.width, height: 410
+        )
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! HeaderCell
+        header.delegate = self
         return header
     }
     
@@ -126,6 +133,27 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         eventController.passedTitle = events[indexPath.row].eventName
         eventController.passedDescription = events[indexPath.row].eventDescription
         navigationController?.pushViewController(eventController, animated: true)
+    }
+
+}
+
+extension HomeController: HeaderCellDelegate {
+    func didPressPost() {
+        present(PostController(), animated: true)
+    }
+}
+
+
+extension HomeController: PostGridLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> Float {
+        return 260
+//        let height = events[indexPath.item].imageHeight
+//        if height < 850 {
+//            return 260
+//        } else {
+//            return (height / 4) + 100
+//        }
+
     }
 
 }

@@ -2,9 +2,11 @@
 //  ProfileController.swift
 //  CultureAR
 //
-//  Created by Ahmad Karkouty on 3/18/19.
+//  Created by Franck-Stephane Ndame Mpouli on 19/03/2019.
 //  Copyright © 2019 Ahmad Karkouti. All rights reserved.
 //
+
+import UIKit
 
 import UIKit
 import FirebaseAuth
@@ -43,11 +45,19 @@ class ProfileController: UIViewController {
         return button
     }()
     
+    let logoutButton2: UIBarButtonItem = {
+        let btn = UIBarButtonItem()
+        btn.title = "Logout"
+        return btn
+    }()
+    
+    
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        navigationController!.navigationItem.rightBarButtonItem = logoutButton2
         
         profileImage.anchor(view: view, top: view.safeAreaLayoutGuide.topAnchor, padding: UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0), size: CGSize(width: 50, height: 50))
         profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -89,8 +99,9 @@ class ProfileController: UIViewController {
         } catch let err {
             print(err)
         }
-            
+        
     }
     
-
+    
 }
+
