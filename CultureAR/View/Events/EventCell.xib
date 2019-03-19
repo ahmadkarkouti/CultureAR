@@ -128,6 +128,7 @@
                 <outlet property="descriptionLabel" destination="KkQ-7G-PkD" id="34M-mh-x8z"/>
                 <outlet property="imageView" destination="Oim-HM-d6O" id="lVj-eF-fEk"/>
                 <outlet property="nameLabel" destination="Lo2-bB-M9g" id="CdK-K2-Ldd"/>
+                <outlet property="organisationImage" destination="aPF-lc-BkF" id="zgI-0G-CwU"/>
             </connections>
         </collectionViewCell>
     </objects>

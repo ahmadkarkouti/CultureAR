@@ -16,6 +16,7 @@
                 <outlet property="emailLabel" destination="U2X-6w-yhx" id="FD6-Lj-HdO"/>
                 <outlet property="nameLabel" destination="27f-xH-emT" id="jLK-qE-QlQ"/>
                 <outlet property="profileImage" destination="mDH-mz-pVg" id="Jrb-FB-ipN"/>
+                <outlet property="tableView" destination="7v5-LN-bEl" id="AH4-E6-9dY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -68,6 +69,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7v5-LN-bEl">
+                    <rect key="frame" x="0.0" y="206" width="375" height="461"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -76,7 +81,11 @@
                 <constraint firstItem="U2X-6w-yhx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="84M-fi-rcn"/>
                 <constraint firstItem="U2X-6w-yhx" firstAttribute="top" secondItem="27f-xH-emT" secondAttribute="bottom" id="94m-zw-hjq"/>
                 <constraint firstItem="mDH-mz-pVg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E0a-Cg-227"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7v5-LN-bEl" secondAttribute="trailing" id="Ssq-kL-FZK"/>
                 <constraint firstItem="n5w-Ts-Fqj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="Tra-CI-VOM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7v5-LN-bEl" secondAttribute="bottom" id="VHS-Vz-WFv"/>
+                <constraint firstItem="7v5-LN-bEl" firstAttribute="top" secondItem="Sip-vr-NGo" secondAttribute="bottom" id="XGo-P3-R8G"/>
+                <constraint firstItem="7v5-LN-bEl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Z9y-SP-Amg"/>
                 <constraint firstItem="27f-xH-emT" firstAttribute="top" secondItem="n5w-Ts-Fqj" secondAttribute="bottom" constant="8" id="h06-Av-tRs"/>
                 <constraint firstItem="Sip-vr-NGo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jl3-Uh-DfP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sip-vr-NGo" secondAttribute="trailing" id="kWi-it-CBy"/>

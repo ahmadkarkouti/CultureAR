@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqY-Sb-1JW">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="190"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="dOe-dp-t1h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="dOe-dp-t1h">
                                 <rect key="frame" x="30" y="16" width="100" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="6H1-OS-Vof"/>
@@ -73,6 +73,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="90" height="134"/>
+            <connections>
+                <outlet property="modelImageView" destination="dOe-dp-t1h" id="dpW-U0-6f3"/>
+                <outlet property="modelNameLabel" destination="axZ-CQ-33w" id="2hT-E7-VK3"/>
+            </connections>
             <point key="canvasLocation" x="169.59999999999999" y="191.6041979010495"/>
         </collectionViewCell>
     </objects>

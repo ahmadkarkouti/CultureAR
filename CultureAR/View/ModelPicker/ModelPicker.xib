@@ -21,33 +21,72 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qSr-AX-8TZ">
-                    <rect key="frame" x="0.0" y="307" width="375" height="350"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w88-Ha-QTy" userLabel="Dismiss View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="eLC-uF-dmV" appends="YES" id="Q5Z-sY-kXf"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f03-Yq-LLW" userLabel="Picker View">
+                    <rect key="frame" x="0.0" y="357" width="375" height="300"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qSr-AX-8TZ">
+                            <rect key="frame" x="0.0" y="74" width="375" height="210"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="210" id="cMw-p8-ag3"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="63G-nr-xts">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ian-SI-o0s">
+                            <rect key="frame" x="16" y="35" width="343" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="350" id="V1Q-Xh-ZBO"/>
+                        <constraint firstItem="Ian-SI-o0s" firstAttribute="leading" secondItem="f03-Yq-LLW" secondAttribute="leading" constant="16" id="Azy-Wn-ROz"/>
+                        <constraint firstItem="qSr-AX-8TZ" firstAttribute="leading" secondItem="f03-Yq-LLW" secondAttribute="leading" id="B4g-w4-hT6"/>
+                        <constraint firstAttribute="height" constant="300" id="JqU-Mi-b6c"/>
+                        <constraint firstAttribute="trailing" secondItem="qSr-AX-8TZ" secondAttribute="trailing" id="MVd-Oj-JFn"/>
+                        <constraint firstAttribute="trailing" secondItem="Ian-SI-o0s" secondAttribute="trailing" constant="16" id="Oc4-vb-DkL"/>
+                        <constraint firstItem="qSr-AX-8TZ" firstAttribute="top" secondItem="Ian-SI-o0s" secondAttribute="bottom" constant="16" id="Pnh-rN-xAt"/>
+                        <constraint firstAttribute="bottom" secondItem="qSr-AX-8TZ" secondAttribute="bottom" constant="16" id="z1t-Yg-KfT"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="63G-nr-xts">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
-                    </collectionViewFlowLayout>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="15"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                </collectionView>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="qSr-AX-8TZ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-10" id="SUR-UE-vvv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qSr-AX-8TZ" secondAttribute="trailing" id="qx9-0D-e4G"/>
-                <constraint firstItem="qSr-AX-8TZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uQ9-7o-k86"/>
+                <constraint firstItem="w88-Ha-QTy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3QO-Mj-9Sm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f03-Yq-LLW" secondAttribute="bottom" constant="10" id="8iM-ar-dck"/>
+                <constraint firstItem="f03-Yq-LLW" firstAttribute="top" secondItem="w88-Ha-QTy" secondAttribute="bottom" id="MrN-0o-pMW"/>
+                <constraint firstItem="w88-Ha-QTy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TNT-bf-nze"/>
+                <constraint firstItem="w88-Ha-QTy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bbB-75-V5y"/>
+                <constraint firstItem="f03-Yq-LLW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jjH-wK-SUJ"/>
+                <constraint firstItem="f03-Yq-LLW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yQF-K8-ePL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="152.47376311844079"/>
         </view>
+        <tapGestureRecognizer id="eLC-uF-dmV">
+            <connections>
+                <action selector="dismissPicker:" destination="-1" id="p5v-XX-kb8"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

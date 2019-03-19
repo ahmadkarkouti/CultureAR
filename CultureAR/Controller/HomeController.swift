@@ -13,6 +13,8 @@ import Kingfisher
 
 class HomeController: UIViewController {
     
+    var randomImages = [#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly"),#imageLiteral(resourceName: "monthly"),#imageLiteral(resourceName: "weekly")]
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -109,6 +111,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         cell.imageView.kf.setImage(with: url)
         cell.nameLabel.text = events[indexPath.row].eventName
         cell.descriptionLabel.text = events[indexPath.row].eventDescription
+        cell.organisationImage.image = randomImages[Int.random(in: 0 ..< randomImages.count - 1)]
         return cell
     }
 

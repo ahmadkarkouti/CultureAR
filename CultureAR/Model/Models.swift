@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+struct ARModel {
+    let name: String
+    let image: UIImage
+    let path: String
+}
+
 struct User {
     let id: String
     let name: String
