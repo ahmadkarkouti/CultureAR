@@ -43,6 +43,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         btn.heightAnchor.constraint(equalToConstant: 50).isActive = true
         btn.widthAnchor.constraint(equalToConstant: 50).isActive = true
         btn.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        btn.addTarget(self, action: #selector(changeModel), for: .touchUpInside)
         return btn
     }()
     
@@ -111,7 +112,7 @@ class ARController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/monalisa/monalisa.scn")!
@@ -148,6 +149,13 @@ class ARController: UIViewController, ARSCNViewDelegate {
     
     @objc func closeButtonPressed() {
        dismiss(animated: true)
+    }
+    
+    @objc func changeModel() {
+        definesPresentationContext = true
+        let vc = ModelPicker()
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

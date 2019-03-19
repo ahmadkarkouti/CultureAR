@@ -12,6 +12,10 @@
 		5B1F157D22406AB5008119A0 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F157B22406AB5008119A0 /* ARController.swift */; };
 		5B1F15852240DC4D008119A0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F15832240DC4D008119A0 /* ProfileController.swift */; };
 		5B1F15862240DC4D008119A0 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1F15842240DC4D008119A0 /* ProfileController.xib */; };
+		5B1F15892240EEAE008119A0 /* ModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F15872240EEAD008119A0 /* ModelPicker.swift */; };
+		5B1F158A2240EEAE008119A0 /* ModelPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1F15882240EEAE008119A0 /* ModelPicker.xib */; };
+		5B1F158E2240F2CE008119A0 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F158C2240F2CE008119A0 /* ModelCell.swift */; };
+		5B1F158F2240F2CE008119A0 /* ModelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1F158D2240F2CE008119A0 /* ModelCell.xib */; };
 		6847F4ED7F8EDFCECA9F04B0 /* Pods_CultureARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD30BDB63F37AA4338EF8F1A /* Pods_CultureARTests.framework */; };
 		92DEDA13D07467232F26181D /* Pods_CultureARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 029CBA42D2EDFA4BAA798A09 /* Pods_CultureARUITests.framework */; };
 		9892967D010A9BD1A8D37493 /* Pods_CultureAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE8910091C215AAF7A747C8 /* Pods_CultureAR.framework */; };
@@ -66,6 +70,10 @@
 		5B1F157B22406AB5008119A0 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		5B1F15832240DC4D008119A0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5B1F15842240DC4D008119A0 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
+		5B1F15872240EEAD008119A0 /* ModelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPicker.swift; sourceTree = "<group>"; };
+		5B1F15882240EEAE008119A0 /* ModelPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelPicker.xib; sourceTree = "<group>"; };
+		5B1F158C2240F2CE008119A0 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		5B1F158D2240F2CE008119A0 /* ModelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModelCell.xib; sourceTree = "<group>"; };
 		A5B282A233DD826EB92B63C2 /* Pods-CultureARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CultureARTests/Pods-CultureARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE8910091C215AAF7A747C8 /* Pods_CultureAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CultureAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B85454E66F9E2197E32D88 /* Pods-CultureARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CultureARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CultureARTests/Pods-CultureARTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +149,17 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		5B1F158B2240F291008119A0 /* ModelPicker */ = {
+			isa = PBXGroup;
+			children = (
+				5B1F15872240EEAD008119A0 /* ModelPicker.swift */,
+				5B1F15882240EEAE008119A0 /* ModelPicker.xib */,
+				5B1F158C2240F2CE008119A0 /* ModelCell.swift */,
+				5B1F158D2240F2CE008119A0 /* ModelCell.xib */,
+			);
+			path = ModelPicker;
+			sourceTree = "<group>";
+		};
 		99C3B0B8591A03DCDA50418C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +194,7 @@
 		E0289BA1223FBE570078FD3A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B1F158B2240F291008119A0 /* ModelPicker */,
 				E050E4E622401DA0005CCC14 /* EventHeader */,
 				E041B5BB223FF1C800A2F60F /* Recommended */,
 				E041B5BA223FF10C00A2F60F /* Header */,
@@ -433,7 +453,9 @@
 				E041B5BF223FF1D700A2F60F /* RecommendedCell.xib in Resources */,
 				5B1F15862240DC4D008119A0 /* ProfileController.xib in Resources */,
 				E0C4B012223D3B28008EB44D /* LaunchScreen.storyboard in Resources */,
+				5B1F158F2240F2CE008119A0 /* ModelCell.xib in Resources */,
 				E0C4B00F223D3B28008EB44D /* Assets.xcassets in Resources */,
+				5B1F158A2240EEAE008119A0 /* ModelPicker.xib in Resources */,
 				E041B5C1223FF5C500A2F60F /* GoogleService-Info.plist in Resources */,
 				E050E4EA22401DC1005CCC14 /* EventHeaderCell.xib in Resources */,
 			);
@@ -552,6 +574,7 @@
 				E041B5C7223FFA0900A2F60F /* RegisterController.swift in Sources */,
 				E050E4E522401C06005CCC14 /* EventController.swift in Sources */,
 				E041B5C5223FF9E400A2F60F /* LoginController.swift in Sources */,
+				5B1F158E2240F2CE008119A0 /* ModelCell.swift in Sources */,
 				E041B5BE223FF1D700A2F60F /* RecommendedCell.swift in Sources */,
 				5B1F157D22406AB5008119A0 /* ARController.swift in Sources */,
 				5B1F15852240DC4D008119A0 /* ProfileController.swift in Sources */,
@@ -564,6 +587,7 @@
 				5B1F157822403E70008119A0 /* PostGridLayout.swift in Sources */,
 				E050E4E922401DC1005CCC14 /* EventHeaderCell.swift in Sources */,
 				E041B5AF223FE68F00A2F60F /* EventCell.swift in Sources */,
+				5B1F15892240EEAE008119A0 /* ModelPicker.swift in Sources */,
 				E06A0976223FC6F40026A06A /* Models.swift in Sources */,
 				E0289BA5223FBE920078FD3A /* HomeController.swift in Sources */,
 				E0C4B006223D3B27008EB44D /* AppDelegate.swift in Sources */,
